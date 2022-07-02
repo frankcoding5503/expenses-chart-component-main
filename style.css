@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+  margin:  0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  background-color: hsl(27, 66%, 92%);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.top {
+  width: 540px;
+  height: 125px;
+  padding: 30px;
+  margin: 180px auto 0;
+
+  border-radius: 16px;
+  background-color: hsl(10, 79%, 65%);
+
+  color: white;
+}
+.box-balance {
+  width: 85%;
+  height: 100%;
+  float: left;
+}
+.box-balance #funds {
+  margin-top: 8px;
+
+  font-size: 25px;
+  font-weight: 700;
+}
+.box-img {
+  width: 15%;
+  height: 100%;
+
+  background: url(./images/logo.svg) no-repeat;
+  background-position: center;
+  float: left;
+}
+
+.bottom {
+  width: 540px;
+  height: 510px;
+  padding: 40px;
+  margin: 25px auto 75px;
+
+  border-radius: 16px;
+  background-color: white;
+}
+.bottom .title {
+  width: 100%;
+  height: 10%;
+
+  color: hsl(25, 47%, 15%);
+  font-size: 25px;
+}
+.bottom .chart {
+  width: 100%;
+  height: 55%;
+  padding: 25px 0 50px;
+  
+  border-bottom: 3px solid hsl(27, 66%, 92%);
+}
+.bottom .month_compare {
+  width: 100%;
+  height: 35%;
+  padding-top: 40px;
+}
+.month_compare .this_month {
+  width: 60%;
+  height: 100%;
+  color: hsl(28, 10%, 53%) ;
+  float: left;
+}
+#spend-thismonth {
+  margin-top: 20px;
+  font-size: 40px;
+  color: hsl(25, 47%, 15%);
+  font-weight: 700;
+}
+.month_compare .last_month {
+  width: 40%;
+  height: 100%;
+  text-align: right;
+  color: hsl(28, 10%, 53%) ;
+  float: left;
+}
+#changes {
+  margin: 30px 0 10px;
+  color: hsl(25, 47%, 15%);
+  font-weight: 700;
+}
+
+.bottom .chart {
+  display: grid;
+  grid-template-columns: repeat( 7, 1fr );
+  align-items: end;
+}
+.chart .strip {
+  width: 50px;
+  height: 100px;
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 8px;
+  position: relative;
+
+  transition: background-color 0.25s;
+}
+.chart .strip::after {
+  font-size: 12px;
+  font-weight: 700;
+  color: hsl(28, 10%, 53%) ;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+}
+.chart .strip:hover {
+  background-color: rgb(254, 135, 117);
+}
+#strip-mon::after {
+  content: "mon";
+  margin-left: -13px;
+}
+#strip-tue::after {
+  content: "tue";
+  margin-left: -10px;
+}
+#strip-wed::after {
+  content: "wed";
+  margin-left: -10px;
+}
+#strip-thu::after {
+  content: "thu";
+  margin-left: -10px;
+}
+#strip-fri::after {
+  content: "fri";
+  margin-left: -6px;
+}
+#strip-sat::after {
+  content: "sat";
+  margin-left: -8px;
+}
+#strip-sun::after {
+  content: "sun";
+  margin-left: -10px;
+}
+
+.tooltip {
+  width: 60px;
+  height: 25px;
+  border-radius: 4px;
+  background-color:hsl(25, 47%, 15%);
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  letter-spacing: 1.5px;
+  line-height: 25px;
+  position: absolute;
+
+  top: -30px;
+  left: 50%;
+  margin-left: -30px;
+
+  display: none;
+}
+.chart .strip:hover .tooltip {
+  display: block;
+}

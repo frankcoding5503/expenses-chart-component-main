@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <section class="top">
+    <div class="box-balance">
+      <p>My balance</p>
+      <p id="funds">$921.48</p>
+    </div>
+    <div class="box-img"></div>
+  </section>
+
+  <section class="bottom">
+    <h1 class="title">Spending - Last 7 days</h1>
+    <div class="chart">
+      <div class="strip" id="strip-mon">
+        <p class="tooltip" id="tooltip-mon"></p>
+      </div>
+      <div class="strip" id="strip-tue">
+        <p class="tooltip" id="tooltip-tue"></p>
+      </div>
+      <div class="strip" id="strip-wed">
+        <p class="tooltip" id="tooltip-wed"></p>
+      </div>
+      <div class="strip" id="strip-thu">
+        <p class="tooltip" id="tooltip-thu"></p>
+      </div>
+      <div class="strip" id="strip-fri">
+        <p class="tooltip" id="tooltip-fri"></p>
+      </div>
+      <div class="strip" id="strip-sat">
+        <p class="tooltip" id="tooltip-sat"></p>
+      </div>
+      <div class="strip" id="strip-sun">
+        <p class="tooltip" id="tooltip-sun"></p>
+      </div>
+    </div>
+    <div class="month_compare">
+      <div class="this_month">
+        <p>Total this month</p>
+        <p id="spend-thismonth">$478.33</p>
+      </div>
+      <div class="last_month">
+        <p id="changes">+2.4%</p>
+        <p>from last month</p>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript" src="data.json"></script>
+  <script ype="text/javascript" src="javascript.js"></script>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Frank Chen</a>.
+  </div>
+</body>
+</html>
